@@ -2,10 +2,13 @@ package com.example.sqllitetest;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
+
+import java.util.ArrayList;
 
 public class MyDBProduit extends SQLiteOpenHelper {
 
@@ -52,4 +55,33 @@ public class MyDBProduit extends SQLiteOpenHelper {
     public static long delete_produit(SQLiteDatabase sqLiteDatabase,int id){
         return sqLiteDatabase.delete(TableName,"ID = "+id,null);
     }
+    public static ArrayList<Produit> getAllProds (SQLiteDatabase sqLiteDatabase){
+        ArrayList<Produit> prds=new ArrayList<>();
+        Cursor cur=sqLiteDatabase.rawQuery("SELECT * FROM "+TableName,null);
+        while (cur.moveToNext()){
+            Produit p=new Produit();
+            p.setId(cur.getInt(0));
+            p.setLibelle(cur.getString(1));
+            p.setFamille(cur.getString(2));
+            p.setPrixAchat(cur.getDouble(3));
+            p.setPrixVente(cur.getDouble(4));
+            prds.add(p);
+        }
+        return prds;
+    }
+    public static Produit getOnePr(SQLiteDatabase sqLiteDatabase,int id){
+        Produit p=null;
+        Cursor cr=sqLiteDatabase.rawQuery("SELECT * FROM "+TableName+" WHERE ID= "+id,null);
+        if(cr.moveToNext()){
+            p=new Produit();
+            p.setId(cr.getInt(0));
+            p.setLibelle(cr.getString(1));
+            p.setFamille(cr.getString(2));
+            p.setPrixAchat(cr.getDouble(3));
+            p.setPrixVente(cr.getDouble(4));
+        }
+        return p;
+    }
+
+
 }
