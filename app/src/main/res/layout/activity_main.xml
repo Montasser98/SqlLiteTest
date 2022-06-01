@@ -7,6 +7,30 @@
     android:orientation="vertical"
 
     tools:context=".MainActivity">
+<TextView
+    style="@style/styletitre"
+    android:text="Menu Generale"/>
+    <Button
+        style="@style/menubtn"
+        android:text="Lister produit"
+        android:id="@+id/b1"
+        android:onClick="acces"/>
+    <Button
+        style="@style/menubtn"
+        android:text="Fiche produit"
+        android:id="@+id/b2"
+        android:onClick="acces"/>
+    <Button
+        style="@style/menubtn"
+        android:text="@string/menu3"
+        android:id="@+id/b3"
+        android:onClick="acces"/>
+
+    <Button
+        style="@style/menubtn"
+        android:text="@string/menu4"
+        android:id="@+id/b4"
+        android:onClick="acces"/>
 
 
 

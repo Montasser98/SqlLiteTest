@@ -1,3 +1,21 @@
 <resources>
-    <string name="app_name">SqlLiteTest</string>
+    <string name="app_name">Gestion Produit</string>
+    <string name="titremenu">Menu Generale</string>
+    <string name="titreadd">Ajouter Produit</string>
+    <string name="titreedit">Editer Produit</string>
+    <string name="titrefiche">Fiche Produit</string>
+    <string name="titrelister">Lister Produits</string>
+
+    <string name="menu1">Lister produits</string>
+    <string name="menu2">Fiche produit</string>
+    <string name="menu3">Nouveau produit</string>
+    <string name="menu4">Editer produit</string>
+
+
+    <string-array name="familles">
+        <item>Epicerie</item>
+        <item>Textile</item>
+        <item>Legumes</item>
+        <item>Fruits</item>
+    </string-array>
 </resources>

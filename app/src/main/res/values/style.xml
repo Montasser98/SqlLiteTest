@@ -11,5 +11,20 @@
     <item name="android:textSize">35sp</item>
 
 </style>
+    <style name="menubtn" parent="android:Widget.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:background">#FFB300</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+    <style name="zonetexte" parent="android:Widget.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textSize">25sp</item>
+    </style>
 
 </resources>
