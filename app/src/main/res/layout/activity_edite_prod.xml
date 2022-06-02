@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EditeProd">
+
+    <TextView
+        style="@style/styletitre"
+        android:text="@string/menu4" />
+
+    <Spinner
+        android:id="@+id/spedit"
+        style="@style/combo" />
+
+    <EditText
+        android:id="@+id/editlib"
+        style="@style/zonetexte"
+        android:hint="Libelle ...." />
+
+    <EditText
+        android:id="@+id/editfam"
+        style="@style/zonetexte"
+        android:hint="Famille ...." />
+
+    <EditText
+        android:id="@+id/editpa"
+        style="@style/zonetexte"
+        android:hint="Prix achat ...."
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/editpv"
+        style="@style/zonetexte"
+        android:hint="Prix vente ...."
+        android:inputType="numberDecimal" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            style="@style/menubtn"
+            android:onClick="modifier"
+            android:text="Modifier"
+            />
+
+        <Button
+            android:layout_marginTop="20dp"
+            style="@style/menubtn"
+            android:onClick="supprimer"
+            android:text="Supprimer" />
+    </LinearLayout>
+
+</LinearLayout>

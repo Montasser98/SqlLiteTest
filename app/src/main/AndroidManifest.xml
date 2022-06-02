@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SqlLiteTest">
         <activity
+            android:name=".EditeProd"
+            android:exported="false" />
+        <activity
+            android:name=".FicheProd"
+            android:exported="false" />
+        <activity
+            android:name=".ListProd"
+            android:exported="false" />
+        <activity
+            android:name=".AddProd"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

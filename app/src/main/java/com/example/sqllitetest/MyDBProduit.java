@@ -43,8 +43,9 @@ public class MyDBProduit extends SQLiteOpenHelper {
         ct.put(Col4,p.getPrixAchat());
         ct.put(Col5,p.getPrixVente());
         return sqLiteDatabase.insert(TableName,null,ct);
+
     }
-    public static long update_produit(SQLiteDatabase sqLiteDatabase,Produit p){
+    public static long update_produit (SQLiteDatabase sqLiteDatabase,Produit p){
         ContentValues ct=new ContentValues();
         ct.put(Col2,p.getLibelle());
         ct.put(Col3,p.getFamille());
